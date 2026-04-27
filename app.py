@@ -79,6 +79,6 @@ if st.button("Predict"):
         st.error("📉 Low Performance")
 
     st.subheader(f"Confidence: {probability:.2f}")
-if st.button("Predict"):
-    prediction = model.predict(...)
-    probability = model.predict_proba(...).max()
+if st.button("Predict", key="predict_button"):
+    probability = 0.85  # example
+    st.progress(float(probability))
